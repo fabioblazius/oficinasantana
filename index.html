@@ -65,15 +65,14 @@
       margin-top: 20px;
       gap: 20px;
       height: 500px;
-      /* Altura para permitir rolagem */
       overflow-y: auto;
-      /* Permite rolagem vertical */
       scroll-behavior: smooth;
       padding-bottom: 10px;
     }
 
     .vehicle {
       display: flex;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
       gap: 10px;
@@ -81,9 +80,7 @@
       padding: 10px;
       border-radius: 8px;
       height: 100vh;
-      /* Cada carro ocupa a tela toda */
       min-height: 500px;
-      /* Altura mínima */
       box-sizing: border-box;
     }
 
@@ -99,8 +96,8 @@
 
     @media (max-width: 600px) {
       .vehicle {
-        flex-direction: column;
-        justify-content: space-evenly;
+        flex-direction: column; /* Empilha as imagens no celular */
+        justify-content: center;
       }
 
       .vehicle img {
